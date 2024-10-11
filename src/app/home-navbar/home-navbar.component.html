@@ -1,0 +1,29 @@
+<div class="navBox">
+    <div>
+        <app-logo />
+    </div>
+    <div>
+        <div><a routerLink="/" class="navLink">Home</a></div>
+        <div><a routerLink="/allrecipes" class="navLink" >Recipes</a></div>
+        <div><a routerLink="/addRecipe" class="navLink" *appIsAdmin>Add Recipe</a></div>
+        <a [routerLink]="['carts',id]">
+        <div class="card">
+                      <div >Carts 🛒 </div>
+        </div>
+    </a>
+        <div class="profile-box"  (click)="OnVisible()">
+            <div class="profile-img"  >
+                <img [src]="imagepath"  alt="no">
+               
+            </div>
+            <ul *ngIf="isVisibile()" >
+                <li><a [routerLink]="['user',1]" style="color: black;">Profile  </a> </li>
+                <li><a routerLink="/agGrid" *appIsAdmin >All Carts</a></li>
+                <li><a routerLink="/addRecipe" *appIsAdmin >Add Recipe</a></li>
+                <li><button (click)="logout()">logout <img src="assets/switch.png" alt=""></button></li>
+            </ul>
+        </div>
+
+        
+    </div>
+</div>
