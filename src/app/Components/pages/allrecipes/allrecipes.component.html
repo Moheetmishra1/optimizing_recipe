@@ -1,0 +1,11 @@
+
+<div class="recipeBox">
+@for(recipe of recipes();track recipe.id){
+    <!-- <div class="container"> -->
+    <app-initial-recipe-details [details]="{id:recipe.id,rating:recipe.rating,reviewCount:recipe.reviewCount,name:recipe.name,image:recipe.image}" />
+          <!-- <a [routerLink]="['/recipe',recipe.id]" class="view"><div>View</div></a> -->
+        <!-- </div> -->
+
+}
+<!-- <div><button (click)="moreData()">View More ⇊</button></div> -->
+</div>

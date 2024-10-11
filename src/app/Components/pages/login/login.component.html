@@ -1,0 +1,44 @@
+
+
+
+      <div class="form-signin">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <app-logo />
+          <h1 class="login" >Log in </h1>
+          <div class="form-error">{{submitError()}} </div>
+
+          <div class="form-floating control">
+            <input type="text" class="form-control" id="floatingInput" name="email" (click)="removeError()" placeholder="name@example.com" 
+            ngModel #email="ngModel"   required>
+            <label for="floatingInput">Enter User Name</label>
+          </div>
+
+          <div class="form-floating control" >
+            <input type="password" class="form-control" id="floatingPassword" name="password" (click)="removeError()" placeholder="Password"
+               ngModel #password="ngModel"   required >
+            <label for="floatingPassword">Enter Password</label>
+          </div>
+          <div class="control-error">
+            <p *ngIf="(email.touched && email.dirty && email.invalid)  &&(password.touched && password.dirty && password.invalid) && !submitError() ;else emailValid">
+              Invalid Username or Password.
+            </p>
+            <ng-template #emailValid>
+              <p *ngIf="(email.touched && email.dirty && email.invalid) && !submitError();else passwordValid " >
+                Username must contain atleast lower-upper alpabet and atleast one '_' with range 6-25.
+              </p>
+            </ng-template>
+            <ng-template #passwordValid >
+              <p *ngIf="(password.touched && password.dirty && password.invalid)&& !submitError();else authentic">
+                Password length must be 6-15 and it contains only upper-loewer-alphabet and atleast anyone  '_','+','-' character. 
+              </p>
+            </ng-template>
+            <ng-template #authentic >
+              <p *ngIf="authenticationError">{{authenticationError}}</p>
+    
+            </ng-template>
+          </div>
+          <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+          <br>
+        </form>
+        <div><a routerLink="/signup" > Don't have an account? sign up</a></div>   
+  </div>

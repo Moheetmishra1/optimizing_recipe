@@ -1,0 +1,23 @@
+
+
+.recipeBox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;   
+    gap: 2em;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+}
+.conatiner{
+    position: relative;
+}
+.view{
+    position: relative;
+    bottom: -405px;
+    left: -277px;
+    height: 10px;
+
+}

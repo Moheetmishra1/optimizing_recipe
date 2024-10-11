@@ -1,0 +1,25 @@
+
+header{
+    height: 10vh;
+    background-color: yellow;
+    background-image: linear-gradient(to right,rgb(243, 247, 183),yellow,rgb(245, 247, 178));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 7px 1px black;
+}
+
+header div{
+    font-family: cursive;
+    font-size: 3em;
+}
+
+section{
+    margin: 4em 1em;
+    display: flex;
+    gap: 1em;
+    flex-basis: 2em;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

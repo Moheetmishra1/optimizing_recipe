@@ -1,0 +1,25 @@
+<div class="formOuterBox">
+    <div class="formAllBox">
+
+        <header class="headerImage">
+            <img [src]="imagesProperty[index].path" [height]="imagesProperty[index].height+'em'" alt="not found" />
+           <div class="header-above">
+            <app-logo />
+            <div class="header-sec3">
+                <p>Join us and start shopping in style</p>
+                <span> 
+                <a routerLink="/login">   <button class="login threeD">Login</button></a>
+                </span>
+            </div>  
+           </div>
+
+           <div class="buttonSliders">
+            <button (click)="updateSlide('prev')">«</button>
+            <button (click)="updateSlide('next')">»</button>
+           </div>
+        </header>
+        <app-ss />
+        
+    </div>
+    
+</div>

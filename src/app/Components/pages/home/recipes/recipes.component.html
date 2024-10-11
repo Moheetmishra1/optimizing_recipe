@@ -1,0 +1,18 @@
+<div class="box">
+    <header>
+        <div>{{name().toUpperCase()}}'s recipes 😇...</div>
+    </header>
+    <section>
+        @if(isLoading){
+            <div>
+                 Page is loading... please wait a moment.
+            </div>
+        }@else {
+           @for(recipe of recipes(); track recipe.id ){
+            <!-- <app-navigate-wrapper [url]="'/recipe/'+recipe.id" > -->
+                <app-initial-recipe-details [details]="{id:recipe.id,rating:recipe.rating,reviewCount:recipe.reviewCount,name:recipe.name,image:recipe.image}" />
+            <!-- </app-navigate-wrapper> -->
+            } 
+        }
+    </section>
+</div>

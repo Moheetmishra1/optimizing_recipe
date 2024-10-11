@@ -1,0 +1,23 @@
+
+<div class="table">
+   <header >
+    <p>Tags</p>
+
+    <!-- <div class="searchBox">
+        <input type="text" (change)="search()">
+    </div> -->
+   </header>
+    <div class="tableDetails">
+    @for(tag of tags().slice(0,paginatedTag);track tag){
+        <div><a [routerLink]="['/recipes/tag',tag]" [title]="'click to see all types '+tag ">{{tag}}</a></div>
+    }
+    </div>
+    <div class="view">
+        @if(!hidePrev){
+            <button  (click)="updateTag('desc')">«View less</button>
+        }
+        @if(!hideNext){
+            <button (click)="updateTag('inc')">View More»</button>
+        }
+    </div>
+</div>

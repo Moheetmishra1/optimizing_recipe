@@ -1,0 +1,16 @@
+
+.footer{
+    background-color: rgb(39, 35, 35);
+    color: white;
+    width: 98.9vw;
+    overflow: hidden;
+    padding: 1em;
+
+}
+.footer a{
+    color: white;
+}
+.footer li{
+    color: white;
+
+} 

@@ -1,0 +1,51 @@
+<marquee  class="offer"><div>It's time to do unique with variety of recipes🍟🍜....</div></marquee>
+
+<div class="belowNavbar">
+    Simple recipes made for <span class="text-design">𝓇𝑒𝒶𝓁 , 𝒶𝒸𝓉𝓊𝒶𝓁 , 𝑒𝓋𝑒𝓇𝓎𝒹𝒶𝓎 𝓁𝒾𝒻𝑒.</span>.
+</div>
+
+@if(isLoading){
+    <h2 style="text-align: center;">Page is loading.....😋😊</h2>
+}
+
+<div class="category-item">
+@for(item of recipesByCuisine; track item.image){
+   <app-category-image [obj]="item"  class="threeD cuisine" />
+    }
+</div>
+
+ <div class="dishContainer">
+@for(item of recipesByTag;track item[0]){
+    <app-navigate-wrapper [url]="'/recipes/tag/'+item[0]"  >     
+            <app-dish-container [title]="item[0]" [arr]="item[1]" />
+    </app-navigate-wrapper>
+}
+</div>
+
+<app-search-and-all class="dishContainer-down" />
+
+@defer ( on viewport) {
+<div class="recipesCard">
+    <div>
+@for(item of recipes().slice(0,paginatedRecipe);track item.id){
+    <app-recipe-card  [recipe]="{
+     title:item.name,
+    image:item.image,
+    cuisine:item.cuisine,
+    id:item.id,
+    userId:item.userId,
+    difficulty:item.difficulty
+  }" (openForm)="openForm(item.id)" />
+}
+    </div >
+        <app-tags-table />
+    </div>
+
+} @placeholder {
+    <p>Loading.... </p>
+}
+
+<div class="viewMore">
+    <button  (click)="increaseRecipe()">View More</button>
+</div>
+

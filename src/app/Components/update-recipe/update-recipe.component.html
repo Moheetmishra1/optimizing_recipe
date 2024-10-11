@@ -1,0 +1,72 @@
+<!-- recipe-form.component.html -->
+<form [formGroup]="recipeForm" class="formArea" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" formControlName="name" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="caloriesPerServing">Calories per serving:</label>
+      <input type="number" formControlName="caloriesPerServing" id="caloriesPerServing" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="cookTimeMinutes">Cook time (minutes):</label>
+      <input type="number" formControlName="cookTimeMinutes" id="cookTimeMinutes" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="cuisine">Cuisine:</label>
+      <input type="text" formControlName="cuisine" id="cuisine" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="difficulty">Difficulty:</label>
+      <input type="text" formControlName="difficulty" id="difficulty" class="form-control">
+    </div>
+    <!-- <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="number" formControlName="id" id="id" class="form-control" readonly>
+    </div> -->
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="text" formControlName="image" id="image" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="ingredients">Ingredients:</label>
+      <textarea formControlName="ingredients" id="ingredients" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="instructions">Instructions:</label>
+      <textarea formControlName="instructions" id="instructions" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="mealType">Meal type:</label>
+      <input type="text" formControlName="mealType" id="mealType" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="prepTimeMinutes">Prep time (minutes):</label>
+      <input type="number" formControlName="prepTimeMinutes" id="prepTimeMinutes" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input type="number" formControlName="rating" id="rating" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="reviewCount">Review count:</label>
+      <input type="number" formControlName="reviewCount" id="reviewCount" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="servings">Servings:</label>
+      <input type="number" formControlName="servings" id="servings" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="tags">Tags:</label>
+        <input type="text" formControlName="tags" id="tags" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="userId">User  ID:</label>
+        <input type="number" formControlName="userId" id="userId" class="form-control">
+      </div>
+      
+      <div class="button both" >
+        <a [routerLink]="['/home']"><button type="submit"  class="cancel">Cancel</button></a>
+            <button type="submit" class="btn btn-primary">Update Recipe</button>
+    </div>
+    </form>

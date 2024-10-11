@@ -1,0 +1,9 @@
+
+@if(isLoading){
+    <p >Loading... please wait </p>
+}@else {
+    @if(recipe()){
+
+        <update-recipe-form title="'update'" [dataPass]="recipe()"   />
+    }
+}

@@ -1,0 +1,97 @@
+body{
+    background-color: #23527c;
+}
+:host{
+  width: 90%;
+}
+.container {
+    margin-top: 50px;
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    transition: background-position 0.5s ease-out;
+  }
+  
+  .card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .card-header {
+    background-color: #337ab7;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.5s ease-out;
+  }
+
+  .input-error:has(.ng-invalid.ng-touched.ng-dirty) label {
+    color: #f98b75;
+  }
+
+input.ng-invalid.ng-touched.ng-dirty {
+    background-color: #fbdcd6;
+    border-color: #f84e2c;
+  }
+
+  
+  .form-control:focus {
+    border-color: #337ab7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #23527c;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #337ab7;
+    margin-right: 10px;
+  }
+  
+  /* Animation */
+  
+  .container:hover {
+    background-position: 100% 100%;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }

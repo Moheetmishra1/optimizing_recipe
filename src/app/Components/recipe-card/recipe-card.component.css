@@ -1,0 +1,538 @@
+/* :host{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 4px;
+    border: none;
+    margin: 2em 15vw;
+    background-color: white;
+    height: 15em;
+
+    
+}
+
+img{
+    height: 14.2em;
+    width: 100%;
+}
+
+.details{
+    margin: 1em 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.details a{
+    color: goldenrod;
+    text-decoration: none;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.title{
+    font-size: 2.5em;
+    font-family: cursive;
+    font-weight: 600;
+}
+.level{
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.admin{
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: end;
+
+    align-items: center;
+    gap: 5px;
+}
+.adim>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update{
+    height: 2.1em;
+    width: 3.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.update div{
+    font-size: 0.9em;
+} */
+
+
+/* 
+:host {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 4px;
+    border: none;
+    margin: 2em 15vw;
+    background-color: white;
+    height: 15em;
+  }
+  
+  img {
+    height: 14.2em;
+    width: 100%;
+  }
+  
+  .details {
+    margin: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .details a {
+    color: goldenrod;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .title {
+    font-size: 2.5em;
+    font-family: cursive;
+    font-weight: 600;
+  }
+  
+  .level {
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .admin {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .adim > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .update {
+    height: 2.1em;
+    width: 3.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .update div {
+    font-size: 0.9em;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    :host {
+      grid-template-columns: 1fr;
+      margin: 1em 5vw;
+      height: 20em;
+    }
+    img {
+      height: 10em;
+    }
+    .details {
+      margin: 1em 1em;
+    }
+    .title {
+      font-size: 2em;
+    }
+    .level {
+      font-size: 1em;
+    }
+    .admin {
+      position: relative;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 1.8em;
+      width: 3em;
+    }
+    .update div {
+      font-size: 0.7em;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1000px) {
+    :host {
+      grid-template-columns: 2fr 4fr;
+      margin: 1.5em 10vw;
+      height: 18em;
+    }
+    img {
+      height: 12em;
+    }
+    .details {
+      margin: 1.2em 1.5em;
+    }
+    .title {
+      font-size: 2.2em;
+    }
+    .level {
+      font-size: 1.1em;
+    }
+    .admin {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 2em;
+      width: 3.5em;
+    }
+    .update div {
+      font-size: 0.8em;
+    }
+  }
+  
+ 
+  @media only screen and (min-width: 1001px) and (max-width: 1280px) {
+    :host {
+      grid-template-columns: 2fr 5fr;
+      margin: 2em 12vw;
+      height: 15em;
+    }
+    img {
+      height: 14.2em;
+    }
+    .details {
+      margin: 1em 2em;
+    }
+    .title {
+      font-size: 2.5em;
+    }
+    .level {
+      font-size: 1.2em;
+    }
+    .admin {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 2.1em;
+      width: 3.8em;
+    }
+    .update div {
+      font-size: 0.9em;
+    }
+  }
+  
+
+@media only screen and (min-width: 1281px) {
+    :host {
+      grid-template-columns: 2fr 6fr;
+      margin: 2.5em 18vw;
+      height: 18em;
+    }
+    img {
+      height: 16.2em;
+    }
+    .details {
+      margin: 1.5em 3em;
+    }
+    .title {
+      font-size: 3em;
+    }
+    .level {
+      font-size: 1.5em;
+    }
+    .admin {
+      gap: 10px;
+    }
+    .update {
+      height: 2.5em;
+      width: 4.5em;
+    }
+    .update div {
+      font-size: 1.1em;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 1600px) {
+    :host {
+      grid-template-columns: 2fr 7fr;
+      margin: 3em 20vw;
+      height: 20em;
+    }
+    img {
+      height: 18.2em;
+    }
+    .details {
+      margin: 2em 4em;
+    }
+    .title {
+      font-size: 3.5em;
+    }
+    .level {
+      font-size: 1.8em;
+    }
+    .admin {
+      gap: 15px;
+    }
+    .update {
+      height: 3em;
+      width: 5.5em;
+    }
+    .update div {
+      font-size: 1.3em;
+    }
+  } */
+
+
+
+
+  :host {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 4px;
+    border: none;
+    margin: 2em 15vw;
+    background-color: white;
+    height: 15em;
+  }
+  
+  img {
+    height: 14.2em;
+    width: 100%;
+  }
+  
+  .details {
+    margin: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .details a {
+    color: goldenrod;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .title {
+    font-size:  1.5em;
+    font-family: cursive;
+    font-weight: 600;
+  }
+  
+  .level {
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .admin {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .adim > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .update {
+    height: 2.1em;
+    width: 3.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .update div {
+    font-size: 0.9em;
+  }
+  @media (max-width:510px   ){
+
+    .title{
+      font-size: 15px;
+    }
+    .continue{
+      font-size: 12px;
+    }
+  }
+  
+  /* Small screens (max-width: 600px) */
+  @media (max-width: 600px) {
+    :host {
+      grid-template-columns: 1fr;
+      margin: 1em 5vw;
+      height: 20em;
+    }
+    img {
+      height: 10em;
+    }
+    .details {
+      margin: 1em 1em;
+    }
+    .title {
+      font-size: 20px;
+    }
+    .level {
+      font-size: 1em;
+    }
+    .admin {
+      position: relative;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 1.8em;
+      width: 3em;
+    }
+    .update div {
+      font-size: 0.7em;
+    }
+    .details a {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media (min-width:601px) and(max-width:840px){
+    .title {
+      font-size: 10px;
+    }
+    .continue{
+      font-size: 15px;
+    }
+
+  }
+  /* Medium screens (min-width: 601px) and (max-width: 1000px) */
+  @media (min-width: 841px) and (max-width: 1000px) {
+    :host {
+      grid-template-columns: 2fr 4fr;
+      margin: 1.5em 10vw;
+      height: 18em;
+    }
+    img {
+      height: 12em;
+    }
+    .details {
+      margin: 1.2em 1.5em;
+    }
+    .title {
+      font-size: 2.2em;
+    }
+    .level {
+      font-size: 1.1em;
+    }
+    .admin {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 2em;
+      width: 3.5em;
+    }
+    .update div {
+      font-size: 0.8em;
+    }
+    .details a {
+      font-size: 1.8em;
+    }
+  }
+  
+  /* Large screens (min-width: 1001px) and (max-width: 1280px) */
+  @media only screen and (min-width: 1001px) and (max-width: 1280px) {
+    :host {
+      grid-template-columns: 2fr 5fr;
+      margin: 2em 12vw;
+      height: 15em;
+    }
+    img {
+      height: 14.2em;
+    }
+    .details {
+      margin: 1em 2em;
+    }
+    .title {
+      font-size: 2.5em;
+    }
+    .level {
+      font-size: 1.2em;
+    }
+    .admin {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 2.1em;
+      width: 3.8em;
+    }
+    .update div {
+      font-size: 0.9em;
+    }
+    .details a {
+      font-size: 2em;
+    }
+  }
+  
+  /* Extra large screens (min-width: 1281px) */
+  @media only screen and (min-width: 1281px) {
+    :host {
+      grid-template-columns: 2fr 5fr;
+      margin: 2em 15vw;
+      height: 15em;
+    }
+    img {
+      height: 14.2em;
+    }
+    .details {
+      margin: 1em 2em;
+    }
+    .title {
+      font-size: 2.5em;
+    }
+    .level {
+      font-size: 1.2em;
+    }
+    .admin {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .update {
+      height: 2.1em;
+      width: 3.8em;
+    }
+    .update div {
+      font-size: 0.9em;
+    }
+    .details a {
+      font-size: 2em;
+    }
+  }

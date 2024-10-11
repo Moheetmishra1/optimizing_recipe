@@ -1,0 +1,13 @@
+<img [src]="recipe().image" alt="">
+<div class="details">
+    <div  class="level"  style="color:#cf23b1;">{{recipe().cuisine}}</div>
+    <div class="title">{{recipe().title}}</div>
+    <div class="level" [ngStyle]="{color:recipe().difficulty==='Easy'?'green':recipe().difficulty==='Difficult'?'red':'blue'}">{{recipe().difficulty}}</div>
+    <div><a [routerLink]="['/recipe',recipe().id]" class="continue">Continue Reading »</a></div>
+
+    <div class="admin" *appIsAdmin >
+       <a [routerLink]="['/update',recipe().id]"> <div ><button type="button" class="update btn btn-info rounded-pill px-3"><div>update</div> </button></div></a>
+        <div (click)="deleteRecipe()"><button type="button" class="btn btn-danger rounded-pill px-3">delete</button ></div>
+    </div>
+</div>
+
