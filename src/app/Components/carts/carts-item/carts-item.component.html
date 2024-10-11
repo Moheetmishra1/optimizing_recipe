@@ -1,0 +1,68 @@
+
+
+<div _ngcontent-ng-c525090438="" class="table-responsive">
+  <table _ngcontent-ng-c525090438="" class="table">
+    <thead _ngcontent-ng-c525090438="">
+      <tr _ngcontent-ng-c525090438="">
+        <th
+          _ngcontent-ng-c525090438=""
+          scope="col"
+          class="text-uppercase header"
+        >
+          item
+        </th>
+        <th _ngcontent-ng-c525090438="" scope="col" class="text-uppercase">
+          Quantity
+        </th>
+        <th _ngcontent-ng-c525090438="" scope="col" class="text-uppercase">
+          price each
+        </th>
+        <th _ngcontent-ng-c525090438="" scope="col" class="text-uppercase">
+          total
+        </th>
+      </tr>
+    </thead>
+    <tbody _ngcontent-ng-c525090438="">
+      <tr _ngcontent-ng-c525090438="">
+        <td _ngcontent-ng-c525090438="" class="item">
+          <div _ngcontent-ng-c525090438="" class="d-flex align-items-start">
+            <img
+              _ngcontent-ng-c525090438=""
+              src="{{product.thumbnail}}"
+              alt="no image"
+            />
+            <div _ngcontent-ng-c525090438="" >
+              {{product.title}} 
+              <div _ngcontent-ng-c525090438="" class="text-uppercase new">
+                <span _ngcontent-ng-c525090438="" class="fas fa-star"></span>new
+              </div>
+              <div _ngcontent-ng-c525090438="">
+                
+              </div>
+            </div>
+          </div>
+        </td>
+        <td _ngcontent-ng-c525090438="" class="buttonClass">
+           <div class="update">
+             <button (click)="updateCart('decrease')"  >-</button>
+            </div>
+             {{product.quantity}} 
+             <div  class="update">
+              <button (click)="updateCart('increase')"  >+</button>
+             </div>
+             </td>
+        <td _ngcontent-ng-c525090438="" class="d-flex flex-column">   {{product.price |currency :"₹ "}}</td>
+        <td _ngcontent-ng-c525090438="" class="font-weight-bold">
+          {{(product.quantity*product.price).toFixed(2) |currency :"₹ "}}
+         
+        </td >
+        <td style="border: none;" >
+          <button (click)="deleteCart()">
+            <img src="assets/dustbin/e-1.gif" alt="" height="25px" width="25px" style="border: none;">
+          </button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

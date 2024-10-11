@@ -1,0 +1,31 @@
+.d-flex {
+    display: flex;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .btn {
+    /* background-color: #4CAF50; */
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #943454;
+  }
+  
+  /* Add more styles here... */

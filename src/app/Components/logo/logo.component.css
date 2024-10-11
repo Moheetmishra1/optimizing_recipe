@@ -1,0 +1,23 @@
+.oleo-script-bold {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+:host{
+    background-color: #aa96da;
+    border-radius: 9%;
+    max-width: 95px;
+    height: 2em;
+    margin-left: 0.4em;
+    padding: 2px 4px 2px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span>div{
+    text-transform: capitalize;
+    color: white;
+    font-size: 1em;
+}

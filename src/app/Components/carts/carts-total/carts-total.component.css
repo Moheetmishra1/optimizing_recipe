@@ -1,0 +1,13 @@
+
+
+.total{
+    display: flex;
+    gap: 1em;
+    font-size: 1.5em;
+    background-color: rgb(71, 125, 241);
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+    align-items: center;
+
+}

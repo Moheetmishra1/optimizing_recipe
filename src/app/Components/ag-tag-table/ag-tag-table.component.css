@@ -1,0 +1,32 @@
+:host{
+    width: 100vw;
+    background-color: black;
+}
+.container{
+    background-color: white;
+    color: black;
+    width: 100vw;
+    height: 90vh;
+    /* padding: 2em; */
+    border: 1px solid black;
+    position: relative;
+}
+
+.ag-grid{
+    position: absolute;
+    left: -3vw;
+    width: 95vw;
+    height: 80vh;
+    padding: 4em 0px;
+}
+
+.ag-grid div[comp-id]{
+    text-align: center;
+    color: red;
+}
+
+.buttonBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 2px;
+}

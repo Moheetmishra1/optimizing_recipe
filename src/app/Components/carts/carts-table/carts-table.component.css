@@ -1,0 +1,43 @@
+#table {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .d-md-flex {
+    display: flex;
+  }
+  
+  .align-items-md-center {
+    align-items: center;
+  }
+  
+  .px-3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .pt-3 {
+    padding-top: 20px;
+  }
+  
+  .editors {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .editors img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Add more styles here... */
+
+  .flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

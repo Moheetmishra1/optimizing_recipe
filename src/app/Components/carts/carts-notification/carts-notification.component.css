@@ -1,0 +1,48 @@
+.notification {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Add more styles here... */
+
+
+  .notification-box{
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: 500;
+    margin: 5px;
+    border-radius: 0.5em;
+  }
+
+  .notification-box button{
+    background-color: transparent;
+    height:1.2em;
+    border: none;
+    color: white  ;
+    font-weight:500 ;
+
+  }
+
+  .notification-box button:hover{
+    background-color: #3e8e41;
+    /* padding: 0.1em; */
+  }
